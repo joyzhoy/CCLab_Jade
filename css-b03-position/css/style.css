@@ -1,0 +1,52 @@
+body {
+	font-family: "Helvetica";
+	background-color: wheat;
+}
+
+h3 {
+	font-family: "Courier New";
+	color: darkblue;
+}
+
+p {
+	background-color: white;
+	color: black;
+}
+
+div {
+	background-color: gray;
+	width: 250px;
+	height: 100px;
+	margin: 50px;
+	padding: 5px;
+}
+
+.static-div {
+	background-color: lightyellow;
+}
+
+.relative-div {
+	background-color: lightblue;
+	position: relative;
+	left: 120px;
+}
+
+.absolute-div {
+	background-color: greenyellow;
+	position: absolute;
+	left: 300px;
+	top: 550px;
+	color: white;
+}
+
+.fixed-div {
+	background-color:palevioletred;
+	position: fixed;
+	right: 10%;
+	top: 10%;
+	color: white;
+}
+
+
+
+
