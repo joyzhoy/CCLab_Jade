@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+canvas {
+  display: block;
+}
+
+
+
+.name{
+  font-style: italic;
+  color:rgb(24, 106, 134);
+  background-color: rgba(255, 228, 92, 0.5);
+  font-size: 40px;
+  position: relative;
+  left:580px;
+  top:530px;
+  width: 310px;
+}
+
+.instruction{
+  background-color: rgba(255,255,255,0.5);
+  font-size: 30px;
+  position: relative;
+  top:520px;
+  left:440px;
+  width:600px;
+}
+
+.link{
+  top:0;
+  position: fixed;
+  font-size: 32px;
+  left:1150px;
+}
