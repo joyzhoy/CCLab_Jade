@@ -34,7 +34,7 @@ canvas {
 
 .link{
   top:80px;
-  position: fixed;
+  position: absolute;
   font-size: 32px;
   left:1150px;
 }
