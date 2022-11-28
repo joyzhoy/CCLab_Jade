@@ -27,13 +27,13 @@ canvas {
   background-color: rgba(255,255,255,0.5);
   font-size: 30px;
   position: relative;
-  top:520px;
+  top:500px;
   left:440px;
   width:600px;
 }
 
 .link{
-  top:0;
+  top:80px;
   position: fixed;
   font-size: 32px;
   left:1150px;
