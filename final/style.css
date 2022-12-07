@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:kai;
+  }
+canvas {
+    display: block;
+  }
+
+.info{
+  width: fit-content;
+  margin-left: 85%;
+  color:rgb(108,132,141);
+  font-family: cursive;
+  font-size:40px;
+  background-image: url(cloud.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:right;
+}
+
+.text{
+    font-size: 60px;
+    color:rgb(101,133,142);
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.8)),url(text.png);
+    background-size: cover;
+}
+
+@font-face {
+  font-family:kai;
+  src:url("kai.ttf");
+}
+
+
+/* #t{
+    font-size: 60px;
+    color:rgb(3, 46, 85);
+}
+
+#lunar{
+    font-size: 60px;
+    color:rgb(3, 46, 85);
+} */
+
+
+#bagua{
+    background-image: url(circle.png);
+    background-size: cover;
+    animation: rota 80s linear infinite;
+}
+
+
+@keyframes rota {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform:  rotateZ(
+          360deg);
+    }
+  }

@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color:black;
+  font-family: kai;
+}
+canvas {
+  display: block;
+}
+
+@font-face {
+  font-family:kai;
+  src:url("kai.ttf");
+}
+
+#p5-canvas-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}

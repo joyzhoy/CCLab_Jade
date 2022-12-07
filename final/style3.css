@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: kai;
+  background-image: url(bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+canvas {
+  display: block;
+}
+
+.info{
+  color:rgb(108,132,141);
+  width: fit-content;
+  margin-left: 93%;
+  font-family: cursive;
+  font-size:40px;
+  background-image: url(cloud.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:right;
+  /* position: fixed; */
+}
+
+.title{
+  text-align: center;
+  color:rgb(51, 80, 96);
+  margin-top: 50px;
+  font-size: 55px;
+  padding: 6%;
+  background-image: url(window.png);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 20%;
+  background-position-y: 30%;
+}
+
+.content{
+  background-color: rgba(242, 242, 199, 0.3);
+  color:rgb(39, 60, 72);
+  font-family: cursive;
+  font-size: 30px;
+  margin-top: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+
+@font-face {
+  font-family:kai;
+  src:url("kai.ttf");
+}
