@@ -38,7 +38,7 @@ function setup() {
 
 function draw() {
   background(bg);
-  gif.position(750, 430);
+  gif.position(850, 500);
 // gif.size(200, 400);
   stroke(0);
   fill(0);
@@ -232,25 +232,25 @@ function CalConv()
     out = [daan,liulian,suxi,chikou,xiaoji,kongwang];
     out1 = [daan1,liulian1,suxi1,chikou1,xiaoji1,kongwang1];
 
-    // rect(500,200,650,250);
+    // rect(300,180,900,270);
     // rect(750,530,500,200);
-    if(mouseX>=500 && mouseX<=550+650 && mouseY>=200 && mouseY<=450){
+    if(mouseX>=300 && mouseX<=1200 && mouseY>=180 && mouseY<=180+270){
       fill(255,134,110,fade1);
       fade1+=10;
       stroke(0,50);
-      textSize(25);
+      textSize(30);
       textFont("cursive");
       if(te){
       text("Click to check intepretation!",680,150);}
     } else{fade1=0;}
 
-    if(mouseX>=750 && mouseX<=750+500 && mouseY>=530 && mouseY<=730){
+    if(mouseX>=850 && mouseX<=850+500 && mouseY>=530 && mouseY<=730){
       fill(255,134,110,fade2);
       fade2+=10;
       stroke(0,50);
-      textSize(25);
+      textSize(30);
       textFont("cursive");
-      text("Click to go back!",800,520);
+      text("Click the birds to go back!",900,560);
     }else{fade2=0;}
 
     if (te){
@@ -283,10 +283,11 @@ function CalConv()
 
 
   function mousePressed(){
-    if(mouseX>=500 && mouseX<=550+650 && mouseY>=200 && mouseY<=450){
+    if(mouseX>=300 && mouseX<=1200 && mouseY>=180 && mouseY<=450){
       te=!te;
     }
-    if(mouseX>=750 && mouseX<=750+500 && mouseY>=530 && mouseY<=730){
+    if(mouseX>=750 && mouseX<=750+600 && mouseY>=530 && mouseY<=830){
       window.open("index.html",target="_self");
     }
   }
+

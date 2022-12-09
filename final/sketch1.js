@@ -28,9 +28,10 @@ function setup() {
   input = createInput("0","int");
   input.position(windowWidth/2-100, windowHeight/2-150);
   input.style('background-color', 'rgb(242,205,117)');
-  input.style('font-size','20px');
+  input.style('font-size','30px');
   input.style('width','100px');
   input.style('height','40px');
+  input.style('font-family','cursive')
   input.style('background-image','url(text1.png)')
   input.style('background-size','cover')
 
@@ -38,8 +39,9 @@ function setup() {
   button.position(input.x + input.width+10,windowHeight/2-148);
   button.mousePressed(enter);
   button.style('color', 'rgb(113,154,159)');
-  button.style('font-size','20px');
-  button.style('height','40px');
+  button.style('font-size','30px');
+  button.style('font-family','cursive')
+  button.style('height','45px');
 
   enterNum = createElement('h1', 'Enter one integer that first comes to your mind.');
   enterNum.position(enterNum.width/4, windowHeight/2-300);
@@ -115,4 +117,9 @@ function taiji(){
   }
 }
 
+function keyPressed(){
+  if(keyCode== ENTER){
+    enter();
+  }
+}
 
