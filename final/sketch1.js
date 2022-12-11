@@ -43,8 +43,8 @@ function setup() {
   button.style('font-family','cursive')
   button.style('height','45px');
 
-  enterNum = createElement('h1', 'Enter one integer that first comes to your mind.');
-  enterNum.position(enterNum.width/4, windowHeight/2-300);
+  enterNum = createElement('h1', 'Enter a positive integer that first comes to your mind.');
+  enterNum.position(enterNum.width/5, windowHeight/2-300);
   enterNum.style('color', 'rgb(113,154,159)');
   enterNum.style('background-color','rgba(242,205,117,0.3)')
   enterNum.style('font-size','40px');

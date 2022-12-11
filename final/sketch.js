@@ -2,10 +2,11 @@ let res,resInd,kai,bg;
 let te=true;
 let gif;
 let url = decodeURI(window.location.href);
-let argsIndex = url .split("?param=");
+let argsIndex = url.split("?param=");
 let arg = argsIndex[1];
 let fade1 = 0;
 let fade2 = 0;
+let button;
   
 function preload() {
   kai = loadFont('kai.ttf');
@@ -34,12 +35,28 @@ function setup() {
   result2.style('background-size','contain');
   result2.style('background-repeat','no-repeat');
   result2.style('background-position-y','20px');
+
+  button = createElement('h1','Back');
+  button.mousePressed(back);
+  button.position(windowWidth-150,50);
+  button.style('background-color','rgba(255,0)')
+  button.style('background-image','url(back.png)')
+  button.style('background-size','contain')
+  button.style('background-position-y','5px')
+  button.style('background-position-x','-15px')
+  button.style('background-repeat',"no-repeat")
+  button.style('font-size','30px');
+  button.style('font-family','cursive')
+  button.style('height','60px');
+  button.style('width','100px');
+
 }
 
 function draw() {
+  strokeWeight(1);
   background(bg);
-  gif.position(850, 500);
-// gif.size(200, 400);
+  gif.position(850,map(mouseY,0,windowHeight,400,550));
+// gif.size(400, 200);
   stroke(0);
   fill(0);
   output(resInd);
@@ -244,14 +261,14 @@ function CalConv()
       text("Click to check intepretation!",680,150);}
     } else{fade1=0;}
 
-    if(mouseX>=850 && mouseX<=850+500 && mouseY>=530 && mouseY<=730){
-      fill(255,134,110,fade2);
-      fade2+=10;
-      stroke(0,50);
-      textSize(30);
-      textFont("cursive");
-      text("Click the birds to go back!",900,560);
-    }else{fade2=0;}
+    // if(mouseX>=850 && mouseX<=850+500 && mouseY>=530 && mouseY<=730){
+    //   fill(255,134,110,fade2);
+    //   fade2+=10;
+    //   stroke(0,50);
+    //   textSize(30);
+    //   textFont("cursive");
+    //   text("Click the birds to go back!",900,560);
+    // }else{fade2=0;}
 
     if (te){
       fill(0);
@@ -286,8 +303,11 @@ function CalConv()
     if(mouseX>=300 && mouseX<=1200 && mouseY>=180 && mouseY<=450){
       te=!te;
     }
-    if(mouseX>=750 && mouseX<=750+600 && mouseY>=530 && mouseY<=830){
-      window.open("index.html",target="_self");
-    }
+    // if(mouseX>=750 && mouseX<=750+600 && mouseY>=530 && mouseY<=830){
+    //   window.open("index.html",target="_self");
+    // }
   }
 
+  function back(){
+    window.open("index.html",target="_self");
+  }
