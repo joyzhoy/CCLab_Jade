@@ -6,6 +6,7 @@ let argsIndex = url.split("?param=");
 let arg = argsIndex[1];
 let fade1 = 0;
 let fade2 = 0;
+let fade3 = 0;
 let button;
   
 function preload() {
@@ -205,7 +206,6 @@ function CalConv()
     this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ];
     }
   function output(resInd){
-    fill(0);
     daan = ["大安事事昌","求财在坤方","失物去不远","宅舍保安康","行人身未动","病者主无妨","将军回田野","仔细更推详"];
     liulian = ["留连事难成","求谋日未明","官事凡宜缓","去者未回程","失物南方见","急讨方心称","更须防口舌","人口且平平"];
     suxi = ["速喜喜来临","求财向南行","失物申未午","逢人路上寻","官事有福德","病者无祸侵","田宅六畜吉","行人有信音"];
@@ -251,15 +251,23 @@ function CalConv()
 
     // rect(300,180,900,270);
     // rect(750,530,500,200);
-    if(mouseX>=300 && mouseX<=1200 && mouseY>=180 && mouseY<=180+270){
-      fill(255,134,110,fade1);
-      fade1+=10;
+    // rect(650,100,400,100);
+      fill(188,100,83);
       stroke(0,50);
       textSize(30);
       textFont("cursive");
       if(te){
-      text("Click to check intepretation!",680,150);}
-    } else{fade1=0;}
+        stroke(188,100,83);
+        line(600,140,660,140);
+        line(1030,140,1090,140)
+        stroke(0,50);
+        text("Click to check intepretation!",680,150);}
+      else{
+        stroke(188,100,83);
+        line(600,130,660,130);
+        line(1030,130,1090,130)
+        stroke(0,50);
+        text("Click again to go back!",680,130);}
 
     // if(mouseX>=850 && mouseX<=850+500 && mouseY>=530 && mouseY<=730){
     //   fill(255,134,110,fade2);
@@ -271,8 +279,10 @@ function CalConv()
     // }else{fade2=0;}
 
     if (te){
-      fill(0);
-      stroke(0);
+      fill(0,fade2);
+      fade3=0;
+      stroke(0,fade2);
+      fade2+=5;
     textFont(kai);
     textSize(40);
     for(let i=0;i<out[resInd].length;i++){
@@ -283,8 +293,10 @@ function CalConv()
     }
   }
   else{
-    fill(0);
-    stroke(0,50);
+    fade2=0;
+    fade3+=3;
+    fill(0,fade3);
+    stroke(0,fade3);
     textFont("cursive");
     textSize(30);
     for(let i=0;i<out1[resInd].length;i++){
@@ -300,7 +312,8 @@ function CalConv()
 
 
   function mousePressed(){
-    if(mouseX>=300 && mouseX<=1200 && mouseY>=180 && mouseY<=450){
+    // rect(650,100,400,100);
+    if(mouseX>=650 && mouseX<=1050 && mouseY>=90 && mouseY<160){
       te=!te;
     }
     // if(mouseX>=750 && mouseX<=750+600 && mouseY>=530 && mouseY<=830){
