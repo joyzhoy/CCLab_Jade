@@ -3,8 +3,8 @@
 let input, button, enterNum,load;
 let xpos = [];
 let ypos = [];
-let rx = [];
-let ry = [];
+let posX = [];
+let posY = [];
 
 let R = 50;
 let r = 2 * R;
@@ -56,8 +56,8 @@ function setup() {
   for (let i = 0; i < len; i++) {
     xpos[i] = 0;
     ypos[i] = 0;
-    rx[i] = 0;
-    ry[i] = 0;
+    posX[i] = 0;
+    posY[i] = 0;
   }
 }
 
@@ -90,30 +90,30 @@ function enter() {
   }
 
 function taiji(){
+
   for (let i = 0; i < xpos.length; i++) {
     xpos[i] = xpos[i + 1];
     ypos[i] = ypos[i + 1];
   }
 
-  for (let i = 0; i < rx.length; i++) {
-    rx[i] = rx[i + 1];
-    ry[i] = ry[i + 1];
+  for (let i = 0; i < posX.length; i++) {
+    posX[i] = posX[i + 1];
+    posY[i] = posY[i + 1];
   }
-  rx[rx.length - 1] = R * cos(t);
-  ry[ry.length - 1] = R * sin(t);
+  posX[posX.length - 1] = R * cos(t);
+  posY[posY.length - 1] = R * sin(t);
 
   for (let i = 0; i < xpos.length; i++) {
+    noStroke();
     t += s;
-    strokeWeight(6);
     stroke(255 - i * 5,100-i);
     fill(255,100 - i);
-    ellipse(width / 2 + rx[i], height / 2 + ry[i], r, r);
+    ellipse(width / 2 + posX[i], height / 2 + posY[i], r,r);
 
     t += s;
-    noStroke();
     fill(255 - i * 5);
 
-    ellipse(width / 2 - rx[i], height / 2 - ry[i], r, r);
+    ellipse(width / 2 - posX[i], height / 2 - posY[i], r,r);
   }
 }
 
